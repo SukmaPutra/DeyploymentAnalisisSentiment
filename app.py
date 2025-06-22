@@ -27,7 +27,7 @@ def predict():
     prediction = model.predict(transformed)
 
     # Ubah ke label (opsional, bisa disesuaikan dengan label asli)
-    sentiment = 'negatif' if prediction[0] == 1 else 'positif'
+    sentiment = 'Hate Speech' if prediction[0] == 1 else 'Not Hate Speech'
 
     return render_template('index.html', prediction=sentiment, input_text=input_text)
 
