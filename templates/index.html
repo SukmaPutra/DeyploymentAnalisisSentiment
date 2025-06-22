@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h2>Sentiment Analysis (Random Forest)</h2>
+    <form method="POST" action="/predict">
+        <textarea name="text" rows="4" cols="50" placeholder="Masukkan kalimat..."></textarea><br><br>
+        <input type="submit" value="Prediksi">
+    </form>
+
+    {% if prediction %}
+        <h3>Hasil:</h3>
+        <p><strong>Teks:</strong> {{ input_text }}</p>
+        <p><strong>Sentimen:</strong> {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
